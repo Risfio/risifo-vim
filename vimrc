@@ -20,6 +20,9 @@ Plugin 'tpope/vim-fugitive'
 " Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
+" Info line against standart statusline
+Plugin 'bling/vim-airline'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -34,6 +37,19 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+" ############### PLUGIN SETTINGS ###########################################
+
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#syntastic#enabled = 1
+
+" Default settings for ctrlp.vim support from documentation
+let g:airline#extensions#ctrlp#color_template = 'insert'
+let g:airline#extensions#ctrlp#color_template = 'normal'
+let g:airline#extensions#ctrlp#color_template = 'visual'
+let g:airline#extensions#ctrlp#color_template = 'replace'
+
+let g:airline_theme = 'dark'
 
 " ############## Developers settings bellow ##################################
 " Setting some decent VIM settings for programming
