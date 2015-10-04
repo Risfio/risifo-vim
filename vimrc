@@ -26,6 +26,9 @@ Plugin 'bling/vim-airline'
 " File tree manager
 Plugin 'scrooloose/nerdtree'
 
+" Ctrlp.vim - something like Ctrl+P in Sublime Text
+Plugin 'kien/Ctrlp.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -43,6 +46,21 @@ filetype plugin indent on    " required
 
 " ############### PLUGIN SETTINGS ###########################################
 
+" Ctrlp.vim settings
+"  2 strings bellow - defaults from install
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
+
+" Airline settings
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#syntastic#enabled = 1
 
