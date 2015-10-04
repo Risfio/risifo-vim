@@ -31,6 +31,35 @@ set statusline+=\ [%{getcwd()}]                 " current dir
 set statusline+=%=
 set statusline+=%l/%L,%c%V\                     " Right aligned file nav info
 
+let g:airline_powerline_fonts = 1
+" hi Normal guifg=#d8d8d8 guibg=#34363a font='Meslo LG L DZ 10'
+hi Normal guifg=#d8d8d8 guibg=#34363a
+hi Comment guifg=#767f8c
+hi Number guifg=#ac92ec
+hi String guifg=#f7e3ba
+hi Boolean guifg=#ec87c0
+hi NonText guifg=bg
+hi CursorLine guibg=#3e4145
+hi StatusLine gui=bold guibg=#4a4d52
+hi StatusLineNC gui=bold guibg=#4a4d52 guifg=#222222
+hi VertSplit gui=None guibg=#4a4d52 guifg=#4a4d52
+hi LineNr guifg=#868789
+hi SignColumn guibg=bg
+hi SpecialKey guifg=#444444
+hi Directory guifg=fg gui=bold
+
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree ~/dev/ | endif
+map <C-o> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+" Line below - is different mode for show nerdtree menu. It horrible
+" autocmd BufNew * wincmd l
+
+let g:NERDTreeChDirMode=2
+let g:NERDTreeMinimalUI=1
+let g:NERDTreeShowBookmarks=1
+let g:NERDTreeIgnore=['.swp$', '\.git$', '\~$']
+let g:NERDTreeWinSize=20
 
 " ##################### DEVELOPER SETTINGS ####################
 set nocompatible
