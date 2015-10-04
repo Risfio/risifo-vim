@@ -57,7 +57,9 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_python_python_exec = '/d/python35/'
+" Current path to python executable(executable must be included in path)
+" Change it for another system configuration
+let g:syntastic_python_python_exec = '/d/python35/python'
 
 " Ctrlp.vim settings
 "  2 strings bellow - defaults from install
