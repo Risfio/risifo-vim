@@ -30,7 +30,6 @@ set statusline+=\ [%{&ff}/%Y]                   " filetype
 set statusline+=\ [%{getcwd()}]                 " current dir
 set statusline+=%=
 set statusline+=%l/%L,%c%V\                     " Right aligned file nav info
-
 let g:airline_powerline_fonts = 1
 " hi Normal guifg=#d8d8d8 guibg=#34363a font='Meslo LG L DZ 10'
 hi Normal guifg=#d8d8d8 guibg=#34363a
@@ -61,6 +60,13 @@ let g:NERDTreeShowBookmarks=1
 let g:NERDTreeIgnore=['.swp$', '\.git$', '\~$']
 let g:NERDTreeWinSize=20
 
+" Remove top and side bars
+set go-=m
+set go-=T  "remove toolbar
+set go-=r  "remove right-hand scroll bar
+set go-=L  "remove left-hand scroll bar
+nnoremap <C-F1> :if &go=~#'m'<Bar>set go-=m<Bar>else<Bar>set go+=m<Bar>endif<CR>
+set guiheadroom=0
 " ##################### DEVELOPER SETTINGS ####################
 set nocompatible
 source $VIMRUNTIME/vimrc_example.vim
