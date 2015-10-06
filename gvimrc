@@ -18,9 +18,10 @@ set nowrap
 autocmd FileType c,cpp,java,php,js,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\\\s\\\\+$","","")'))
 
 " Indentation
-set autoindent
+" set autoindent
 set shiftwidth=4
 set tabstop=4
+set expandtab
 
 set laststatus=2
 set statusline=\ %<%f\                          " Filename
@@ -67,6 +68,9 @@ set go-=r  "remove right-hand scroll bar
 set go-=L  "remove left-hand scroll bar
 nnoremap <C-F1> :if &go=~#'m'<Bar>set go-=m<Bar>else<Bar>set go+=m<Bar>endif<CR>
 set guiheadroom=0
+
+:set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+
 " ##################### DEVELOPER SETTINGS ####################
 set nocompatible
 source $VIMRUNTIME/vimrc_example.vim
