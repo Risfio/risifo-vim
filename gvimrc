@@ -58,11 +58,11 @@ hi Boolean guifg=#ec87c0
 hi NonText guifg=bg
 hi CursorLine guibg=#3e4145
 hi StatusLine gui=bold guibg=#4a4d52
-hi StatusLineNC gui=bold guibg=#4a4d52 guifg=#222
+hi StatusLineNC gui=bold guibg=#4a4d52 guifg=#222222
 hi VertSplit gui=None guibg=#4a4d52 guifg=#4a4d52
 hi LineNr guifg=#868789
 hi SignColumn guibg=bg
-hi SpecialKey guifg=#444
+hi SpecialKey guifg=#444444
 hi Directory guifg=fg gui=bold
 
 autocmd StdinReadPre * let s:std_in=1
