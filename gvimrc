@@ -106,7 +106,7 @@ autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 let g:syntastic_cpp_compiler_options=' -std=c++14'
-##################### DEVELOPER SETTINGS ####################
+" ##################### DEVELOPER SETTINGS ####################
 set nocompatible
 source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
