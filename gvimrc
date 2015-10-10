@@ -49,7 +49,8 @@ set guiheadroom=0
 
 " set guifont=Inconsolata-dz\ for\ powerline
 let g:airline_powerline_fonts = 1
-hi Normal guifg=#d8d8d8 guibg=#34363a font='Meslo LG L DZ 10'
+" hi Normal guifg=#d8d8d8 guibg=#34363a font='Meslo LG L DZ 10'
+hi Normal guifg=#d8d8d8 guibg=#34363a
 hi Comment guifg=#767f8c
 hi Number guifg=#ac92ec
 hi String guifg=#f7e3ba
